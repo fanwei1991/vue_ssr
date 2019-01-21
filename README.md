@@ -1,4 +1,4 @@
-# 基于vue-cli 创建的vue服务端框架
+# 基于vue-cli的vue服务端渲染
 
 >vue-cli, vue-server-renderer, webpack4, koa
 
@@ -25,6 +25,4 @@ npm run build --report
 
 ```
 
-**在使用mini-css-webpack-plugin build:server会报错， 因此使用的extract-text-webpack-plugin 4.0.0-beta.0**
-********
-
+**在使用mini-css-webpack-plugin时，build:server会报错， 因此使用的extract-text-webpack-plugin 4.0.0-beta.0**
