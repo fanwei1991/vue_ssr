@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1 @click="handleClick">{{ msg }}</h1>
+    <h1 @click="handleClick" style="cursor: pointer">{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -80,6 +80,7 @@
         </a>
       </li>
     </ul>
+    <h4><a href="https://github.com/fanwei1991/vue_ssr" target="_blank">gitHub</a></h4>
   </div>
 </template>
 
@@ -88,12 +89,12 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'vue-server-renderer'
     }
   },
   methods: {
     handleClick () {
-      alert(121)
+      alert('vue-server-renderer')
     }
   }
 }
