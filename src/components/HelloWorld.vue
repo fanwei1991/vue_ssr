@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1 @click="handleClick" style="cursor: pointer">{{ msg }}</h1>
+    <h1 @click="handleClick" style="cursor: pointer">{{ msg }},id:{{id}}</h1>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -87,6 +87,9 @@
 <script>
 export default {
   name: 'HelloWorld',
+  asyncData ({store, route}) {
+    return store.dispatch('fetchItem', 1)
+  },
   data () {
     return {
       msg: 'vue-server-renderer'
@@ -94,8 +97,16 @@ export default {
   },
   methods: {
     handleClick () {
-      alert('vue-server-renderer')
+      this.$store.commit('setItem', this.$store.state.items.id+1)
     }
+  },
+  computed: {
+    id () {
+      return this.$store.state.items.id
+    }
+  },
+  mounted () {
+    console.log(this.$store.state.items)
   }
 }
 </script>

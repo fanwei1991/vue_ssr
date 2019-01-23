@@ -26,7 +26,6 @@ serverCompiler.watch({}, (err, stats) => {
     serverConfig.output.path,
     'vue-ssr-server-bundle.json'
   )
-  console.log('bundlePath:', bundlePath)
   bundle = JSON.parse(mfs.readFileSync(bundlePath, 'utf-8'))
 })
 

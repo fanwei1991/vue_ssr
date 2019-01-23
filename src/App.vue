@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img @mouseenter="handleClick" class="logo" src="./assets/logo.png">
+    <img class="logo" src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
@@ -11,11 +11,6 @@ export default {
     title: 'vue_ssr_fw'
   },
   name: 'App',
-  methods: {
-    handleClick () {
-      alert('来啦，老弟~~~~')
-    }
-  }
 }
 </script>
 

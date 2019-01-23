@@ -32,7 +32,6 @@ app.use(async (ctx, next) => {
   }
 })
 let pageRouter
-console.log(isDev)
 
 if (isDev) {
   pageRouter = require('./routers/dev-ssr')
